@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Switch, Route } from "react-router-dom";
+import { AppStyle } from "./App.style";
 
-function App() {
+import SearchBar from "./components/Search";
+import BackButton from "./components/BackButton";
+import ThemeChanger from "./components/ThemeChanger";
+import LogoHeader from "./components/LogoHeader";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
+
+import { geolocateUser } from "./store/actions";
+
+const App: React.FunctionComponent = () => {
+  useEffect(() => {
+    geolocateUser();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppStyle>
+      <h1>Service Victoria Forecast App</h1>
+      <ThemeChanger />
+      <LogoHeader />
+      <SearchBar />
+      <Body />
+      <Footer />
+      <BackButton />
+    </AppStyle>
   );
-}
+}; // App
 
 export default App;
