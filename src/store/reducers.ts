@@ -4,6 +4,7 @@ import {
    DONE_API,
    SET_COUNTRY,
    SET_UNITS,
+   CLEAR_RECORDS,
 } from "./actions";
 
 export const INITIAL_STATE = {
@@ -41,6 +42,21 @@ export const units = (state = INITIAL_STATE.units, action) => {
    switch (action.type) {
       case SET_UNITS:
          return action.payload;
+      default:
+         return state;
+   }
+};
+
+export const weatherRecords = (
+   state = INITIAL_STATE.weatherRecords,
+   action
+) => {
+   console.log("inside units reducer", action);
+   switch (action.type) {
+      case DONE_API:
+         return [...state, action.payload];
+      case CLEAR_RECORDS:
+         return [];
       default:
          return state;
    }
