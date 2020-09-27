@@ -17,13 +17,19 @@ export const fetchWeather = ({ city = "Melbourne" } = {}) => (
 
 	dispatch(startApi());
 	fetch(fetchurl)
-		.then((response) => response.json())
+		.then((response) => {
+			if (!response.ok) {
+				dispatch(errorApi(response.statusText));
+				throw Error(response.statusText);
+			} else {
+				return response.json();
+			}
+		})
 		.then((data) => {
 			console.log("data in fetchWeather", data);
 			dispatch(doneApi(data));
 		})
 		.catch((err) => {
 			console.log(err);
-			dispatch(errorApi(err));
 		});
 };

@@ -8,7 +8,7 @@ export const AppStyle = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 30px 200px;
+	padding: 30px 50px;
 	padding-bottom: 50px;
 	text-align: center;
 `;
