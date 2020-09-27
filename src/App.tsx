@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 
 import { AppStyle, BkSv, OptionRow } from "./App.style";
 import { connect } from "react-redux";
@@ -7,14 +7,24 @@ import AustralianWeather from "./components/australia-weather/";
 import UnitChanger from "./components/change-units";
 import CountryChanger from "./components/change-country";
 import Titles from "./components/titles/";
+import DisplayWeather from "./components/display-weather/";
+import ErrorDismiss from "./components/error-dismiss";
 
-const App = ({ ftch, loading, temperature, wind }) => {
+const App = ({ ftch, loading, temperature, wind, error }) => {
+  const [showDismiss, setShowDismiss] = useState(false);
   useEffect(() => {
     ftch();
   }, []);
 
+  useEffect(() => {
+    if (error) {
+      setShowDismiss(true);
+    }
+  }, [error]);
+
   return (
     <Fragment>
+      {showDismiss && <ErrorDismiss onDismiss={() => setShowDismiss(false)} />}
       <BkSv />
       <AppStyle>
         <Titles />
@@ -25,14 +35,7 @@ const App = ({ ftch, loading, temperature, wind }) => {
 
         <AustralianWeather />
         {loading && <div> Loading ... </div>}
-        {!loading && (
-          <Fragment>
-            <div>temperature: {temperature}</div>
-            <div>
-              wind: {wind && wind.speed}, {wind && wind.deg} degree
-            </div>
-          </Fragment>
-        )}
+        {!loading && <DisplayWeather />}
       </AppStyle>
     </Fragment>
   );
@@ -40,8 +43,7 @@ const App = ({ ftch, loading, temperature, wind }) => {
 
 const mapState = (state) => ({
   loading: state.apiCall.inProgress,
-  temperature: state.apiCall.data && state.apiCall.data.temperature,
-  wind: state.apiCall.data && state.apiCall.data.wind,
+  error: state.apiCall.error,
 });
 
 const mapDispatch = (dispatch) => ({
