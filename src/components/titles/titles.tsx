@@ -8,7 +8,6 @@ export const Title = () => (
 			<img src={weatherIcon}></img>
 			<h1>Service Victoria Weather</h1>
 		</TitlesRow>
-		<h4>By Iman Dezfuly</h4>
 	</TitlesDiv>
 );
 

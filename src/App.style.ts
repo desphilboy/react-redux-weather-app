@@ -27,7 +27,8 @@ export const BkSv = styled.div`
 `;
 
 export const OptionRow = styled.div`
-	width: 100%;
+	position: relative;
+	max-width: 80%;
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 20px;

@@ -2,7 +2,8 @@ import styled from "styled-components";
 import weatherIcon from "../../icons/svg/PartlyCloudyIcon.svg";
 
 export const TitlesDiv = styled.div`
-	width: 80%;
+	width: 50%;
+	height: 150px;
 	display: flex;
 	flex-direction: column;
 
@@ -13,9 +14,6 @@ export const TitlesDiv = styled.div`
 	}
 
 	@media only screen and (max-width: 600px) {
-		h4 {
-			font-size: 12px;
-		}
 	}
 `;
 
@@ -26,19 +24,19 @@ export const TitlesRow = styled.div`
 	display: flex;
 
 	img {
-		width: 40%;
-		min-width: 100px;
+		max-height: 100px;
+		max-width: 100px;
 	}
 
 	h1 {
 		min-width: 200px;
 		margin: 0;
-		margin-top: 6vw;
+		margin-top: 3vw;
 		font-size: 3vw;
 	}
 
 	@media only screen and (max-width: 600px) {
-		flex-direction: column;
+		flex-wrap: wrap;
 		h1 {
 			margin-top: 2px;
 			font-size: 18px;
