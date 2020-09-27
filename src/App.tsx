@@ -8,7 +8,7 @@ import UnitChanger from "./components/change-units";
 import CountryChanger from "./components/change-country";
 import Titles from "./components/titles/";
 
-const App: React.FunctionComponent = ({ ftch, loading, temperature, wind }) => {
+const App = ({ ftch, loading, temperature, wind }) => {
   useEffect(() => {
     ftch();
   }, []);

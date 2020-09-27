@@ -20,8 +20,8 @@ export const AustraliaWeather = ({ changeCountry, fetchConditions }) => {
 				<option value="Sydney">Sydney</option>
 				<option value="Melbourne">Melbourne</option>
 				<option value="Alice Springs">Alice Springs</option>
-				<option value="Adelide">Adelide</option>
-				<option value="Hubart">Hubart</option>
+				<option value="Adelaide">Adelaide</option>
+				<option value="Hobart">Hobart</option>
 				<option value="Perth">Perth</option>
 				<option value="Canberra">Canberra</option>
 				<option value="Brisbane">Brisbane</option>

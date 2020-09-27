@@ -7,6 +7,8 @@ export const fetchWeather = ({ city = "Melbourne" } = {}) => (
 	dispatch,
 	getState
 ) => {
+	// const country = getState().country;
+	// const units = getState().units;
 	const { country, units } = getState();
 
 	let fetchurl = `${baseUrl}?q=${city || "Melbourne"},${
