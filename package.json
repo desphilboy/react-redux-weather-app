@@ -22,11 +22,13 @@
     "react-spring": "^8.0.27",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.2.0",
     "typescript": "~3.7.2",
-    "uglify": "^0.1.5"
+    "uglify": "^0.1.5",
+    "url": "^0.11.0"
   },
   "scripts": {
     "start": "react-scripts start",

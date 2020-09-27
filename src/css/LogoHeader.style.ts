@@ -7,10 +7,11 @@ export const LogoHeaderStyle = styled.div`
 	max-height: 100%;
 	transition: max-height 0.5s;
 	icon {
-		margin: 50px;
+		margin: 70px;
 	}
 
 	img {
+		width: 500px;
 		border: 1px solid wheat;
 		border-radius: 10px;
 	}
@@ -25,6 +26,7 @@ export const LogoHeaderStyleAtSide = styled.div`
 	transition: max-height 0.5s;
 	icon {
 		margin-right: 30px;
+
 		margin-top: -20px;
 	}
 `;
