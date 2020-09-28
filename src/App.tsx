@@ -13,7 +13,7 @@ interface AppInterface {
   error: any;
 }
 
-const App: React.FunctionComponent<AppInterface> = ({
+export const App: React.FunctionComponent<AppInterface> = ({
   loading,
   error,
 }): any => {

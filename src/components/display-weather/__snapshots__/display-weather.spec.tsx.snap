@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displayWeather View renders correctly with empty rows 1`] = `
+<div
+  className="sc-gtssRu eTfTVI"
+>
+  <div>
+    Select a city in above box to see the weather
+  </div>
+</div>
+`;
+
+exports[`displayWeather View renders correctly with rows 1`] = `
+<div
+  className="sc-gtssRu eTfTVI"
+>
+  <button
+    onClick={[MockFunction]}
+  >
+    X
+  </button>
+  <div
+    className="sc-bdnylx gQgnDU"
+  >
+    <div
+      className="city-country"
+    >
+      Sydney, AU
+    </div>
+    <div
+      className="main-weather"
+    >
+      <div
+        className="maintext"
+      >
+        Clear
+      </div>
+      <img
+        alt="Clear"
+        src="http://openweathermap.org/img/wn/01d@4x.png"
+      />
+      <div>
+        clear sky
+         
+      </div>
+    </div>
+    <div
+      className="date-time"
+    >
+      1970/01/19 10:47:15
+    </div>
+    <div
+      className="temperature"
+    >
+      <img
+        alt="temperature"
+        src="HeatIcon.svg"
+      />
+      <div
+        className="maintext"
+      >
+        15.85
+      </div>
+    </div>
+    <div
+      className="feels-like"
+    >
+      Feels like: 
+      9.66
+    </div>
+  </div>
+  <div
+    className="sc-bdnylx gQgnDU"
+  >
+    <div
+      className="city-country"
+    >
+      Brisbane, AU
+    </div>
+    <div
+      className="main-weather"
+    >
+      <div
+        className="maintext"
+      >
+        Clouds
+      </div>
+      <img
+        alt="Clouds"
+        src="http://openweathermap.org/img/wn/03d@4x.png"
+      />
+      <div>
+        scattered clouds
+         
+      </div>
+    </div>
+    <div
+      className="date-time"
+    >
+      1970/01/19 10:47:15
+    </div>
+    <div
+      className="temperature"
+    >
+      <img
+        alt="temperature"
+        src="HeatIcon.svg"
+      />
+      <div
+        className="maintext"
+      >
+        18.58
+      </div>
+    </div>
+    <div
+      className="feels-like"
+    >
+      Feels like: 
+      15.8
+    </div>
+  </div>
+  <div
+    className="sc-bdnylx gQgnDU"
+  >
+    <div
+      className="city-country"
+    >
+      Melbourne, AU
+    </div>
+    <div
+      className="main-weather"
+    >
+      <div
+        className="maintext"
+      >
+        Clear
+      </div>
+      <img
+        alt="Clear"
+        src="http://openweathermap.org/img/wn/01d@4x.png"
+      />
+      <div>
+        clear sky
+         
+      </div>
+    </div>
+    <div
+      className="date-time"
+    >
+      1970/01/19 10:47:15
+    </div>
+    <div
+      className="temperature"
+    >
+      <img
+        alt="temperature"
+        src="HeatIcon.svg"
+      />
+      <div
+        className="maintext"
+      >
+        13.05
+      </div>
+    </div>
+    <div
+      className="feels-like"
+    >
+      Feels like: 
+      8.55
+    </div>
+  </div>
+  <div
+    className="sc-bdnylx gQgnDU"
+  >
+    <div
+      className="city-country"
+    >
+      Adelaide, AU
+    </div>
+    <div
+      className="main-weather"
+    >
+      <div
+        className="maintext"
+      >
+        Clouds
+      </div>
+      <img
+        alt="Clouds"
+        src="http://openweathermap.org/img/wn/04d@4x.png"
+      />
+      <div>
+        broken clouds
+         
+      </div>
+    </div>
+    <div
+      className="date-time"
+    >
+      1970/01/19 10:47:15
+    </div>
+    <div
+      className="temperature"
+    >
+      <img
+        alt="temperature"
+        src="HeatIcon.svg"
+      />
+      <div
+        className="maintext"
+      >
+        20.55
+      </div>
+    </div>
+    <div
+      className="feels-like"
+    >
+      Feels like: 
+      13.58
+    </div>
+  </div>
+</div>
+`;

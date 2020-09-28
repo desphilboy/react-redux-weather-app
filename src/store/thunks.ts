@@ -26,7 +26,6 @@ export const fetchWeather = ({ city = "Melbourne" } = {}) => (
 			}
 		})
 		.then((data) => {
-			console.log("data in fetchWeather", data);
 			dispatch(doneApi(data));
 		})
 		.catch((err) => {

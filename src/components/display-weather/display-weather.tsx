@@ -32,14 +32,14 @@ export const DisplayView: React.FunctionComponent<DisplayViewInterface> = ({
 			) : (
 				<div>Select a city in above box to see the weather</div>
 			)}
-			{rows.map((row) => (
-				<WeatherRow weather={row} />
+			{rows.map((row, index) => (
+				<WeatherRow weather={row} key={`key-${index}`} />
 			))}
 		</DisplayWeatherStyle>
 	);
 };
 
-const mapDispatch = (dispatch) => ({
+export const mapDispatch = (dispatch) => ({
 	clearAll: () => dispatch(clearRecords()),
 	resetCountry: () => dispatch(setCountry("AU")),
 	fetchMajorCities: () => {
@@ -49,7 +49,8 @@ const mapDispatch = (dispatch) => ({
 		dispatch(fetchWeather({ city: "Adelaide" }));
 	},
 });
-const mapState = (state) => ({
+
+export const mapState = (state) => ({
 	rows: state.weatherRecords,
 });
 

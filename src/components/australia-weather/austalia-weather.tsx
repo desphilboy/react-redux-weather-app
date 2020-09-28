@@ -14,7 +14,6 @@ export const AustraliaWeather: React.FunctionComponent<AustraliaWeatherInterface
 }): any => {
 	const keyPress = (event) => {
 		if (event.key === "Enter") {
-			console.log("calling");
 			fetchConditions(event);
 		}
 	};
@@ -22,7 +21,9 @@ export const AustraliaWeather: React.FunctionComponent<AustraliaWeatherInterface
 	return (
 		<SearchWeatherStyle>
 			<SearchRowStyle>
-				<label>Select city from list:</label>
+				<label data-testid="select-city-label">
+					Select city from list:
+				</label>
 				<select name="city" onChange={fetchConditions}>
 					<option value="Sydney">Sydney</option>
 					<option value="Melbourne">Melbourne</option>
@@ -36,7 +37,12 @@ export const AustraliaWeather: React.FunctionComponent<AustraliaWeatherInterface
 			</SearchRowStyle>
 			<SearchRowStyle>
 				<label> or type city's name:</label>
-				<input name="city" type="text" onKeyDown={keyPress} />
+				<input
+					data-testid="city-name-input"
+					name="city"
+					type="text"
+					onKeyDown={keyPress}
+				/>
 			</SearchRowStyle>
 		</SearchWeatherStyle>
 	);

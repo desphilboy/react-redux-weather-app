@@ -6,6 +6,7 @@ import temperatureIcon from "../../icons/svg/HeatIcon.svg";
 export const WeatherRow = ({ weather }) => {
 	const { icon, main, description } = weather.data.weather[0];
 	const { temp, feels_like } = weather.data.main;
+	const dateTime = Date.now();
 	return (
 		<WeatherRowStyle>
 			<div className="city-country">{`${weather.data.name}, ${weather.data.sys.country}`}</div>
@@ -18,7 +19,9 @@ export const WeatherRow = ({ weather }) => {
 				<div>{description} </div>
 			</div>
 			<div className="date-time">
-				{moment(weather.dt).format("hh:ss DD/MM/YYYY")}
+				{moment
+					.tz(dateTime, "Australia/Melbourne")
+					.format("YYYY/MM/DD hh:mm:ss")}
 			</div>
 
 			<div className="temperature">
