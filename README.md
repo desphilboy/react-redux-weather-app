@@ -9,6 +9,8 @@ to run this app, you need just the general set of fornt-end development software
     -git
     -node.js and npm
     -google chrome or other modern browser.
+    -   create react app and typescript are used in this app.
+        you might need to install prettier as well.
 
 ## install the app
 
