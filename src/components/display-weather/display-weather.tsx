@@ -1,15 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
+import { DisplayWeatherStyle } from "./display-weather.style";
 
-const WeatherRow = ({ weather }) => <div>{JSON.stringify(weather)}</div>;
+import WeatherRow from "./weather-row";
 
-const DisplayView = ({ rows = [] }) => {
+export const DisplayView = ({ rows = [] }) => {
 	return (
-		<div>
+		<DisplayWeatherStyle>
 			{rows.map((row) => (
 				<WeatherRow weather={row} />
 			))}
-		</div>
+		</DisplayWeatherStyle>
 	);
 };
 
