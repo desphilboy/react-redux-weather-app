@@ -11,7 +11,10 @@ export const WeatherRow = ({ weather }) => {
 			<div className="city-country">{`${weather.data.name}, ${weather.data.sys.country}`}</div>
 			<div className="main-weather">
 				<div className="maintext">{main}</div>
-				<img src={`http://openweathermap.org/img/wn/${icon}@4x.png`} />
+				<img
+					alt={main}
+					src={`http://openweathermap.org/img/wn/${icon}@4x.png`}
+				/>
 				<div>{description} </div>
 			</div>
 			<div className="date-time">
@@ -19,7 +22,7 @@ export const WeatherRow = ({ weather }) => {
 			</div>
 
 			<div className="temperature">
-				<img src={temperatureIcon} />
+				<img alt="temperature" src={temperatureIcon} />
 				<div className="maintext">{temp}</div>
 			</div>
 			<div className="feels-like">Feels like: {feels_like}</div>

@@ -6,7 +6,14 @@ import { fetchWeather } from "../../store/thunks";
 
 import WeatherRow from "./weather-row";
 
-export const DisplayView = ({
+interface DisplayViewInterface {
+	rows: object[];
+	clearAll: () => void;
+	resetCountry: () => void;
+	fetchMajorCities: () => void;
+}
+
+export const DisplayView: React.FunctionComponent<DisplayViewInterface> = ({
 	rows = [],
 	clearAll,
 	resetCountry,
@@ -17,7 +24,7 @@ export const DisplayView = ({
 			resetCountry();
 			fetchMajorCities();
 		}
-	}, [rows]);
+	});
 	return (
 		<DisplayWeatherStyle>
 			{rows.length ? (

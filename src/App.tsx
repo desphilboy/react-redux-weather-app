@@ -1,8 +1,6 @@
 import React, { useEffect, useState, Fragment } from "react";
-
 import { AppStyle, BkSv, OptionRow } from "./App.style";
 import { connect } from "react-redux";
-import { fetchWeather } from "./store/thunks";
 import AustralianWeather from "./components/australia-weather/";
 import UnitChanger from "./components/change-units";
 import CountryChanger from "./components/change-country";
@@ -10,7 +8,15 @@ import Titles from "./components/titles/";
 import DisplayWeather from "./components/display-weather/";
 import ErrorDismiss from "./components/error-dismiss";
 
-const App = ({ loading, temperature, wind, error }) => {
+interface AppInterface {
+  loading: boolean;
+  error: any;
+}
+
+const App: React.FunctionComponent<AppInterface> = ({
+  loading,
+  error,
+}): any => {
   const [showDismiss, setShowDismiss] = useState(false);
 
   useEffect(() => {
@@ -29,7 +35,6 @@ const App = ({ loading, temperature, wind, error }) => {
           <UnitChanger />
           <CountryChanger />
         </OptionRow>
-
         <AustralianWeather />
         {loading && <div> Loading ... </div>}
         {!loading && <DisplayWeather />}
@@ -38,7 +43,7 @@ const App = ({ loading, temperature, wind, error }) => {
   );
 }; // App
 
-const mapState = (state) => ({
+const mapState = (state: any): object => ({
   loading: state.apiCall.inProgress,
   error: state.apiCall.error,
 });

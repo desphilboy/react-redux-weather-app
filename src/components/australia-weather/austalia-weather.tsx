@@ -3,11 +3,16 @@ import { connect } from "react-redux";
 import { fetchWeather } from "../../store/thunks";
 import { SearchWeatherStyle, SearchRowStyle } from "./australia-weather.style";
 
-export const AustraliaWeather = ({ changeCountry, fetchConditions }) => {
-	const keyPress = (event) => {
-		console.log(event.key);
-		console.log(event.target.value);
+interface AustraliaWeatherInterface {
+	changeCountry: (string) => void;
+	fetchConditions: (object) => void;
+}
 
+export const AustraliaWeather: React.FunctionComponent<AustraliaWeatherInterface> = ({
+	changeCountry,
+	fetchConditions,
+}): any => {
+	const keyPress = (event) => {
 		if (event.key === "Enter") {
 			console.log("calling");
 			fetchConditions(event);
@@ -37,7 +42,7 @@ export const AustraliaWeather = ({ changeCountry, fetchConditions }) => {
 	);
 };
 
-const mapDispatch = (dispatch) => ({
+const mapDispatch = (dispatch: (object) => void): object => ({
 	fetchConditions: (event) =>
 		dispatch(fetchWeather({ city: event.target.value })),
 });

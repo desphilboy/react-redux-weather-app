@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import weatherIcon from "../../icons/svg/PartlyCloudyIcon.svg";
 
 export const TitlesDiv = styled.div`
 	width: 50%;
