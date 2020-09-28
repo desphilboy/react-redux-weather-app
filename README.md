@@ -7,8 +7,11 @@ to run this app, you need just the general set of fornt-end development software
 -   a bash compatible terminal
 -   internet connection
     -git
+
     -node.js and npm
+
     -google chrome or other modern browser.
+
     -   create react app and typescript are used in this app.
         you might need to install prettier as well.
 
@@ -35,7 +38,7 @@ you should see the app using url "localhost:3000"
 ## features:
 
 -   The app is written using Typescript / React.js
--   Strong Typing is practised quite in couple of places in the app.
+-   Strong Typing is practiced quite in couple of places in the app but not all functions and components have strong typing.
 -   Styled components are used for styling and css in js.
 -   Redux has been used for state management.
 -   Redux-Thunks is used for async side-effects and api calls.
