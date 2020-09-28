@@ -38,12 +38,12 @@ you should see the app using url "localhost:3000"
 ## features:
 
 -   at start brings 4 major cities weather info.
--   you can have as many cities forecasts on screen by selecting from a list or by typing city name and pressing 'Enter'
+-   you can have as many forecasts as needed on screen by selecting from a list or by typing name and pressing 'Enter'. The new forecast will be added to the list.
 -   you can look at other cities weather by typing the name. not limited to Capital cities.
 -   you can change the units into metric or Imperial.
--   you can choose countiries other than Australia
--   you can clear by pressing the X button. again country will be reset to Australia and the initial 4 major cities are fetched.
--   in case or error ( for example type a city name that does not exist) you will be provided by a dismissable error message.
+-   you can choose countiries other than Australia, but you will not get a list for other countries. Just typing the name.
+-   you can clear by pressing the "X" button. Country will be reset to Australia and the initial 4 major cities are fetched again.
+-   in case of error ( for example if city name does not exist) you will be notified with a dismissable error message.
 
 -   The app is written using Typescript / React.js
 -   Strong Typing is practiced quite in couple of places in the app but not all functions and components have strong typing.
