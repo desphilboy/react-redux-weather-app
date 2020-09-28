@@ -5,15 +5,20 @@
 to run this app, you need just the general set of fornt-end development software installed on your computer:
 
 -   a bash compatible terminal
+
 -   internet connection
-    -git
 
-    -node.js and npm
+-   git
 
-    -google chrome or other modern browser.
+-   node.js and npm
 
-    -   create react app and typescript are used in this app.
-        you might need to install prettier as well.
+-   creat-react-app
+
+-   google chrome or other modern browser.
+
+-   create react app and typescript are used in this app also react-scripts.
+
+you might need to install prettier as well.
 
 ## clone the repo
 
