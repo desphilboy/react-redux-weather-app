@@ -7,7 +7,7 @@ export const ErrorStyle = styled.div`
 	width: 90%;
 	display: flex;
 	justify-content: space-between;
-	font-size: 1.5vw;
+	font-size: calc(10px+0.5vw);
 	padding: 4px;
 	padding-left: 10px;
 	font-weight: bold;
@@ -18,7 +18,7 @@ export const ErrorStyle = styled.div`
 		border: 0;
 		background-color: red;
 		color: Yellow;
-		font-size: 2vw;
+		font-size: 20px;
 		font-weight: bold;
 	}
 `;
