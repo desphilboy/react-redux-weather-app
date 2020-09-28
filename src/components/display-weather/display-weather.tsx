@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { DisplayWeatherStyle } from "./display-weather.style";
+import { clearRecords, setCountry } from "../../store/actions";
+import { fetchWeather } from "../../store/thunks";
 
 import WeatherRow from "./weather-row";
 
-export const DisplayView = ({ rows = [] }) => {
+export const DisplayView = ({
+	rows = [],
+	clearAll,
+	resetCountry,
+	fetchMajorCities,
+}) => {
+	useEffect(() => {
+		if (rows.length === 0) {
+			resetCountry();
+			fetchMajorCities();
+		}
+	}, [rows]);
 	return (
 		<DisplayWeatherStyle>
+			{rows.length ? (
+				<button onClick={clearAll}>X</button>
+			) : (
+				<div>Select a city in above box to see the weather</div>
+			)}
 			{rows.map((row) => (
 				<WeatherRow weather={row} />
 			))}
@@ -14,6 +32,18 @@ export const DisplayView = ({ rows = [] }) => {
 	);
 };
 
-const mapState = (state) => ({ rows: state.weatherRecords });
+const mapDispatch = (dispatch) => ({
+	clearAll: () => dispatch(clearRecords()),
+	resetCountry: () => dispatch(setCountry("AU")),
+	fetchMajorCities: () => {
+		dispatch(fetchWeather({ city: "Melbourne" }));
+		dispatch(fetchWeather({ city: "Sydney" }));
+		dispatch(fetchWeather({ city: "Brisbane" }));
+		dispatch(fetchWeather({ city: "Adelaide" }));
+	},
+});
+const mapState = (state) => ({
+	rows: state.weatherRecords,
+});
 
-export default connect(mapState)(DisplayView);
+export default connect(mapState, mapDispatch)(DisplayView);

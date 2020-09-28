@@ -61,8 +61,28 @@ export const WeatherRowStyle = styled.div`
 `;
 
 export const DisplayWeatherStyle = styled.div`
+	button {
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		font-size: 28px;
+		top: 0%;
+		right: 0%;
+		opacity: 0.1;
+		background-color: pink;
+		border: 1px solid pink;
+		border-radius: 10px;
+	}
+	min-width: 240px;
+	min-height: 300px;
+
 	flex-wrap: wrap;
 	width: 80%;
 	display: flex;
 	flex-direction: row;
+	&:hover {
+		button {
+			opacity: 0.7;
+		}
+	}
 `;

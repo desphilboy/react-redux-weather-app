@@ -10,11 +10,8 @@ import Titles from "./components/titles/";
 import DisplayWeather from "./components/display-weather/";
 import ErrorDismiss from "./components/error-dismiss";
 
-const App = ({ ftch, loading, temperature, wind, error }) => {
+const App = ({ loading, temperature, wind, error }) => {
   const [showDismiss, setShowDismiss] = useState(false);
-  useEffect(() => {
-    ftch();
-  }, []);
 
   useEffect(() => {
     if (error) {
@@ -46,11 +43,4 @@ const mapState = (state) => ({
   error: state.apiCall.error,
 });
 
-const mapDispatch = (dispatch) => ({
-  ftch: () => {
-    console.log("inside ftch");
-    dispatch(fetchWeather());
-  },
-});
-
-export default connect(mapState, mapDispatch)(App);
+export default connect(mapState)(App);
