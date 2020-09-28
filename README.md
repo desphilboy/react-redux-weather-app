@@ -12,8 +12,6 @@ to run this app, you need just the general set of fornt-end development software
 
 -   node.js and npm
 
--   creat-react-app
-
 -   google chrome or other modern browser.
 
 -   create react app and typescript are used in this app also react-scripts.
