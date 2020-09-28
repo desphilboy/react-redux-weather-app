@@ -15,7 +15,16 @@ to run this app, you need just the general set of fornt-end development software
     -   create react app and typescript are used in this app.
         you might need to install prettier as well.
 
+## clone the repo
+
+```
+git clone git@github.com:desphilboy/service-victoria-weather.git
+```
+
 ## install the app
+
+go to folder that you cloned the repo "cd service-victoria-weather"
+then
 
     ```
     npm install
