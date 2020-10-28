@@ -5,8 +5,9 @@ import temperatureIcon from "../../icons/svg/HeatIcon.svg";
 
 export const WeatherRow = ({ weather }) => {
 	const { icon, main, description } = weather.data.weather[0];
-	const { temp, feels_like } = weather.data.main;
+	const { temp, feels_like , pressure,humidity, temp_min, temp_max} = weather.data.main;
 	const dateTime = Date.now();
+	
 	return (
 		<WeatherRowStyle>
 			<div className="city-country">{`${weather.data.name}, ${weather.data.sys.country}`}</div>
@@ -29,6 +30,10 @@ export const WeatherRow = ({ weather }) => {
 				<div className="maintext">{temp}</div>
 			</div>
 			<div className="feels-like">Feels like: {feels_like}</div>
+
+			<div className="pressure"> pressure: {pressure}</div>
+			<div className="hamadity">humidity: {humidity}</div>
+			<div className= "temp_min">minimum temperature: {temp_min}</div>
 		</WeatherRowStyle>
 	);
 };

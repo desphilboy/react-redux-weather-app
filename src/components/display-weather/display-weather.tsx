@@ -40,11 +40,12 @@ export const DisplayView: React.FunctionComponent<DisplayViewInterface> = ({
 };
 
 export const mapDispatch = (dispatch) => ({
+	
 	clearAll: () => dispatch(clearRecords()),
 	resetCountry: () => dispatch(setCountry("AU")),
 	fetchMajorCities: () => {
-		dispatch(fetchWeather({ city: "Melbourne" }));
-		dispatch(fetchWeather({ city: "Sydney" }));
+		//dispatch(fetchWeather({ city: "Melbourne" }));
+		//dispatch(fetchWeather({ city: "Sydney" }));
 		dispatch(fetchWeather({ city: "Brisbane" }));
 		dispatch(fetchWeather({ city: "Adelaide" }));
 	},
