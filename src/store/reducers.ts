@@ -50,7 +50,7 @@ export const weatherRecords = (
 ) => {
    switch (action.type) {
       case DONE_API:
-         return [...state, action.payload];
+         return [...state, action.payload.data];
       case CLEAR_RECORDS:
          return [];
       default:
