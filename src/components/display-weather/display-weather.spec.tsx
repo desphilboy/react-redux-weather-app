@@ -32,14 +32,14 @@ describe("displayWeather", () => {
 
 			map.fetchMajorCities();
 
-			["Melbourne", "Brisbane", "Sydney", "Adelaide"].forEach(
+			[ "Adelaide", "Brisbane"].forEach(
 				(majorCity) => {
 					expect(dispatch).toHaveBeenCalledWith({ city: majorCity });
 				}
 			);
 
 			map.fetchMajorCities();
-			["Melbourne", "Brisbane", "Sydney", "Adelaide"].forEach(
+			[ "Adelaide", "Brisbane"].forEach(
 				(majorCity) => {
 					expect(THUNK.fetchWeather).toHaveBeenCalledWith({
 						city: majorCity,

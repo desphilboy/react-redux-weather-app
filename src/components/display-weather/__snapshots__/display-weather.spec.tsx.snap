@@ -68,6 +68,24 @@ exports[`displayWeather View renders correctly with rows 1`] = `
       Feels like: 
       9.66
     </div>
+    <div
+      className="pressure"
+    >
+       pressure: 
+      1024
+    </div>
+    <div
+      className="hamadity"
+    >
+      humidity: 
+      48
+    </div>
+    <div
+      className="temp_min"
+    >
+      minimum temperature: 
+      15
+    </div>
   </div>
   <div
     className="sc-bdnylx gQgnDU"
@@ -117,6 +135,24 @@ exports[`displayWeather View renders correctly with rows 1`] = `
     >
       Feels like: 
       15.8
+    </div>
+    <div
+      className="pressure"
+    >
+       pressure: 
+      1022
+    </div>
+    <div
+      className="hamadity"
+    >
+      humidity: 
+      63
+    </div>
+    <div
+      className="temp_min"
+    >
+      minimum temperature: 
+      17.78
     </div>
   </div>
   <div
@@ -168,6 +204,24 @@ exports[`displayWeather View renders correctly with rows 1`] = `
       Feels like: 
       8.55
     </div>
+    <div
+      className="pressure"
+    >
+       pressure: 
+      1025
+    </div>
+    <div
+      className="hamadity"
+    >
+      humidity: 
+      62
+    </div>
+    <div
+      className="temp_min"
+    >
+      minimum temperature: 
+      11.67
+    </div>
   </div>
   <div
     className="sc-bdnylx gQgnDU"
@@ -217,6 +271,24 @@ exports[`displayWeather View renders correctly with rows 1`] = `
     >
       Feels like: 
       13.58
+    </div>
+    <div
+      className="pressure"
+    >
+       pressure: 
+      1019
+    </div>
+    <div
+      className="hamadity"
+    >
+      humidity: 
+      26
+    </div>
+    <div
+      className="temp_min"
+    >
+      minimum temperature: 
+      20
     </div>
   </div>
 </div>
