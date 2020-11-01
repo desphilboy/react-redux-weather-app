@@ -4,13 +4,14 @@ import { WeatherRowStyle } from "./display-weather.style";
 import temperatureIcon from "../../icons/svg/HeatIcon.svg";
 
 export const WeatherRow = ({ weather }) => {
-	const { icon, main, description } = weather.data.weather[0];
-	const { temp, feels_like , pressure,humidity, temp_min, temp_max} = weather.data.main;
+
+	const { icon, main, description } = weather.weather[0];
+	const { temp, feels_like , pressure,humidity, temp_min, temp_max} = weather.main;
 	const dateTime = Date.now();
 	
 	return (
 		<WeatherRowStyle>
-			<div className="city-country">{`${weather.data.name}, ${weather.data.sys.country}`}</div>
+			<div className="city-country">{`${weather.name}, ${weather.sys.country}`}</div>
 			<div className="main-weather">
 				<div className="maintext">{main}</div>
 				<img

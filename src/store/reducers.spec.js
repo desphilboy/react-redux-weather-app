@@ -50,11 +50,7 @@ describe("Reducers", () => {
 				ACTIONS.doneApi("data1")
 			);
 			expect(newState).toEqual([
-				{
-					data: "data1",
-					error: false,
-					inProgress: false,
-				},
+			"data1"
 			]);
 		});
 
