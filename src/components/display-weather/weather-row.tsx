@@ -4,7 +4,6 @@ import { WeatherRowStyle } from "./display-weather.style";
 import temperatureIcon from "../../icons/svg/HeatIcon.svg";
 
 export const WeatherRow = ({ weather }) => {
-
 	const { icon, main, description } = weather.weather[0];
 	const { temp, feels_like , pressure,humidity, temp_min, temp_max} = weather.main;
 	const dateTime = Date.now();
