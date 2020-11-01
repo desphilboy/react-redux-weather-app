@@ -1,6 +1,6 @@
 export const SAMPLEROWS = [
 	{
-		data: {
+	
 			coord: {
 				lon: 151.21,
 				lat: -33.87,
@@ -42,12 +42,10 @@ export const SAMPLEROWS = [
 			id: 2147714,
 			name: "Sydney",
 			cod: 200,
-		},
-		inProgress: false,
-		error: false,
+
 	},
 	{
-		data: {
+
 			coord: {
 				lon: 153.03,
 				lat: -27.47,
@@ -89,12 +87,10 @@ export const SAMPLEROWS = [
 			id: 2174003,
 			name: "Brisbane",
 			cod: 200,
-		},
-		inProgress: false,
-		error: false,
+
 	},
 	{
-		data: {
+
 			coord: {
 				lon: 144.96,
 				lat: -37.81,
@@ -136,12 +132,10 @@ export const SAMPLEROWS = [
 			id: 2158177,
 			name: "Melbourne",
 			cod: 200,
-		},
-		inProgress: false,
-		error: false,
+
 	},
 	{
-		data: {
+
 			coord: {
 				lon: 138.6,
 				lat: -34.93,
@@ -183,8 +177,6 @@ export const SAMPLEROWS = [
 			id: 2078025,
 			name: "Adelaide",
 			cod: 200,
-		},
-		inProgress: false,
-		error: false,
+
 	},
 ];
