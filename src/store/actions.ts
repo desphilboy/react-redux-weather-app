@@ -10,6 +10,8 @@ export const SET_UNITS = "SET_UNITS";
 
 export const CLEAR_RECORDS = "CLEAR_RECORDS";
 
+export const SET_COLOR = "SET_COLOR";
+
 export const { startApi, doneApi, errorApi } = createActions({
 	START_API: () => ({ data: false, inProgress: true, error: false }), // payload creator
 	DONE_API: (data) => ({ data, inProgress: false, error: false }),
@@ -28,4 +30,10 @@ export const setCountry = (country) => ({
 
 export const clearRecords = () => ({
 	type: CLEAR_RECORDS,
+});
+
+export const setColor = (color) => ({
+	type: SET_COLOR,
+
+	payload: color,
 });

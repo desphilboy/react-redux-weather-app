@@ -29,6 +29,7 @@ export const fetchWeather = ({ city = "Melbourne" } = {}) => (
 			dispatch(doneApi(data));
 		})
 		.catch((err) => {
+			dispatch(errorApi(err));
 			console.log(err);
 		});
 };

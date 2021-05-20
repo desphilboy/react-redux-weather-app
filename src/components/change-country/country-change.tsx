@@ -28,3 +28,5 @@ const mapState = (state) => ({
 });
 
 export default connect(mapState, mapDispatch)(View);
+
+//<View  changeCountry={skfjksj} country={sjfksjfkls} />
