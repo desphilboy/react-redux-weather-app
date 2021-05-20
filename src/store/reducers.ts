@@ -5,12 +5,13 @@ import {
    SET_COUNTRY,
    SET_UNITS,
    CLEAR_RECORDS,
+   SET_COLOR,
 } from "./actions";
 
 export const INITIAL_STATE = {
    country: "AU",
    units: "metric",
-
+   color: "blue",
    apiCall: { data: false, error: false, inProgress: false },
    weatherRecords: [],
 };
@@ -29,6 +30,15 @@ export const apiCall = (state = INITIAL_STATE.apiCall, action) => {
 export const country = (state = INITIAL_STATE.country, action) => {
    switch (action.type) {
       case SET_COUNTRY:
+         return action.payload;
+      default:
+         return state;
+   }
+};
+
+export const color = (state = INITIAL_STATE.color, action) => {
+   switch (action.type) {
+      case SET_COLOR:
          return action.payload;
       default:
          return state;
